@@ -66,7 +66,14 @@ class Login extends React.Component {
 							로그인
 						</button>
 					</form>
-					<p className="findPassword">비밀번호를 잊으셨나요?</p>
+					<p
+						className="findPassword"
+						onClick={() => {
+							alert('잘 생각해보세요^^');
+						}}
+					>
+						비밀번호를 잊으셨나요?
+					</p>
 				</section>
 				<footer className="footer">
 					<div className="copyright">
