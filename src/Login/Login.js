@@ -17,6 +17,17 @@ class Login extends React.Component {
 	}
 
 	render() {
+		const disabledBtn = {
+			disabled: true,
+			opacity: 0.3,
+			cursor: 'none'
+		};
+		const abledBtn = {
+			disabled: false,
+			opacity: 1,
+			cursor: 'pointer'
+		};
+
 		return (
 			<div className="container">
 				<section className="loginContainer">
@@ -42,7 +53,17 @@ class Login extends React.Component {
 								onChange={this.passwordInputChange}
 							/>
 						</div>
-						<button type="submit" className="loginBtn">
+						<button
+							type="submit"
+							className="loginBtn"
+							style={
+								this.state.inputEmailValue.length > 0 && this.state.inputPasswordValue.length > 0 ? (
+									abledBtn
+								) : (
+									disabledBtn
+								)
+							}
+						>
 							로그인
 						</button>
 					</form>
@@ -57,16 +78,16 @@ class Login extends React.Component {
 		);
 	}
 
-	emailInputChange(e) {
+	emailInputChange = e => {
 		this.setState({
 			inputEmailValue: e.target.value
 		});
-	}
-	passwordInputChange(e) {
+	};
+	passwordInputChange = e => {
 		this.setState({
 			inputPasswordValue: e.target.value
 		});
-	}
+	};
 }
 
 export default Login;
