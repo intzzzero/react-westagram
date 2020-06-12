@@ -1,0 +1,200 @@
+.Feed {
+	padding-top: 83px;
+	display: flex;
+	justify-content: center;
+
+	.feed-container {
+		height: 100vh;
+		width: 614px;
+
+		.Story {
+			height: 116px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 3px;
+			background-color: #fff;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			.stories-list {
+				display: flex;
+				overflow: hidden;
+
+				li {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					margin: 0 20px;
+				}
+
+				img {
+					height: 55px;
+					width: 55px;
+					border-radius: 50%;
+					border: 1px solid rgba(0, 0, 0, 0.1);
+					margin-bottom: 5px;
+				}
+
+				p {
+					font-size: 0.75em;
+					letter-spacing: 0.3px;
+					color: rgba(0, 0, 0, 0.8);
+				}
+			}
+		}
+
+		.feed-wrapper {
+			background-color: #fff;
+			position: relative;
+
+			.FeedHeader {
+				height: 60px;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				margin-top: 25px;
+				padding: 12px;
+				position: relative;
+
+				.posting-user {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					img {
+						height: 32px;
+						border-radius: 50%;
+						border: 0.5px solid rgba(0, 0, 0, 0.2);
+						cursor: pointer;
+					}
+
+					p {
+						font-size: 0.9em;
+						margin: 5px 15px;
+						font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+							'Open Sans', 'Helvetica Neue', sans-serif;
+						cursor: pointer;
+					}
+
+					.location {
+						font-weight: 400;
+						color: rgba(0, 0, 0, 0.8);
+						font-size: 0.75em;
+					}
+
+					.three-dots-icon {
+						position: absolute;
+						right: 0;
+						margin-right: 12px;
+						color: rgba(0, 0, 0, 0.8);
+						cursor: pointer;
+					}
+				}
+			}
+
+			.FeedImg {
+				position: relative;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+				max-width: 940px;
+				max-height: 940px;
+
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.FeedText {
+				min-height: 150px;
+				max-height: fit-content;
+				padding-bottom: 55px;
+				position: relative;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+				border-top: none;
+
+				.icon-wrapper {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 12px 17px;
+
+					.heart-icon,
+					.comment-icon,
+					.paperplane-icon {
+						margin-right: 20px;
+						font-size: 1.5em;
+						color: rgba(0, 0, 0, 0.7);
+						cursor: pointer;
+					}
+
+					.bookmark-icon {
+						font-size: 1.5em;
+						color: rgba(0, 0, 0, 0.7);
+					}
+				}
+
+				.text-wrapper {
+					padding: 0 17px;
+					font-size: 0.9em;
+					font-weight: 600;
+
+					p {
+						margin-bottom: 20px;
+					}
+
+					.comment-container {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+					}
+
+					// .comment {
+					// 	margin-bottom: 15px;
+					// 	font-weight: 400;
+					// }
+
+					// .delete-comment {
+					// 	font-weight: 400;
+					// 	font-size: 0.8em;
+					// 	margin-bottom: 15px;
+					// 	color: rgba(0, 0, 0, 0.7);
+					// 	cursor: pointer;
+					// }
+				}
+
+				.input-comment {
+					width: 100%;
+					height: 55px;
+					position: absolute;
+					bottom: 0;
+					outline: none;
+					border: none;
+					border-top: 1px solid rgba(0, 0, 0, 0.1);
+					padding: 0 20px;
+					font-size: 0.9em;
+				}
+
+				.input-comment::placeholder {
+					color: rgba(0, 0, 0, 0.4);
+				}
+
+				.upload-comment-btn {
+					position: absolute;
+					right: 12px;
+					bottom: 16px;
+					color: #0095f6;
+					font-size: 0.9em;
+					font-weight: 600;
+					opacity: 0.3;
+					cursor: pointer;
+					background: none;
+					border: none;
+					outline: none;
+				}
+			}
+		}
+	}
+}
