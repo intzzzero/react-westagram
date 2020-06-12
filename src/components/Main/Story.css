@@ -1,0 +1,32 @@
+/* stories */
+.Story {
+  height: 116px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.storiesList {
+  display: flex;
+  overflow: hidden;
+}
+.storiesList li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.storiesList img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+.storiesList p {
+  font-size: 0.75em;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.8)
+}
