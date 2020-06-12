@@ -11,15 +11,23 @@ class Login extends React.Component {
 			inputEmailValue: '',
 			inputPasswordValue: ''
 		};
-		this.emailInputChange = this.emailInputChange.bind(this);
-		this.passwordInputChange = this.passwordInputChange.bind(this);
 	}
+
+	emailInputChange = e => {
+		this.setState({
+			inputEmailValue: e.target.value
+		});
+	};
+	passwordInputChange = e => {
+		this.setState({
+			inputPasswordValue: e.target.value
+		});
+	};
 
 	render() {
 		const disabledBtn = {
 			disabled: true,
-			opacity: 0.3,
-			cursor: 'none'
+			opacity: 0.3
 		};
 		const abledBtn = {
 			disabled: false,
@@ -46,7 +54,7 @@ class Login extends React.Component {
 							<input
 								type="password"
 								className="inputPassword"
-								minlength="8"
+								minlength="4"
 								placeholder="비밀번호"
 								value={this.state.inputPasswordValue}
 								onChange={this.passwordInputChange}
@@ -56,7 +64,7 @@ class Login extends React.Component {
 							type="submit"
 							className="loginBtn"
 							style={
-								this.state.inputEmailValue.length > 0 && this.state.inputPasswordValue.length > 0 ? (
+								this.state.inputEmailValue.length > 5 && this.state.inputPasswordValue.length > 5 ? (
 									abledBtn
 								) : (
 									disabledBtn
@@ -83,17 +91,6 @@ class Login extends React.Component {
 			</div>
 		);
 	}
-
-	emailInputChange = e => {
-		this.setState({
-			inputEmailValue: e.target.value
-		});
-	};
-	passwordInputChange = e => {
-		this.setState({
-			inputPasswordValue: e.target.value
-		});
-	};
 }
 
 export default Login;
