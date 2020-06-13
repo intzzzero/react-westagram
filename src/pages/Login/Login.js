@@ -1,7 +1,7 @@
 import React from 'react';
-import '../index.css';
-import './Login.css';
-import logo from '../images/logo.png';
+import '../../index.css';
+import '../../styles/Login.scss';
+import logo from '../../images/logo.png';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -36,16 +36,16 @@ class Login extends React.Component {
 		};
 
 		return (
-			<div className="container">
-				<section className="loginContainer">
-					<div className="logoWrapper">
+			<div className="Login">
+				<section className="login-container">
+					<div className="logo-wrapper">
 						<img src={logo} alt="logo" />
 					</div>
-					<form className="inputContainer">
-						<div className="inputWrapper">
+					<form>
+						<div className="input-wrapper">
 							<input
 								type="text"
-								className="inputEmail"
+								className="input-email"
 								minLength="4"
 								placeholder="전화번호, 사용자 이름 또는 이메일"
 								value={this.state.inputEmailValue}
@@ -53,7 +53,7 @@ class Login extends React.Component {
 							/>
 							<input
 								type="password"
-								className="inputPassword"
+								className="input-password"
 								minlength="4"
 								placeholder="비밀번호"
 								value={this.state.inputPasswordValue}
@@ -62,7 +62,7 @@ class Login extends React.Component {
 						</div>
 						<button
 							type="submit"
-							className="loginBtn"
+							className="login-btn"
 							style={
 								this.state.inputEmailValue.length > 5 && this.state.inputPasswordValue.length > 5 ? (
 									abledBtn
@@ -75,7 +75,7 @@ class Login extends React.Component {
 						</button>
 					</form>
 					<p
-						className="findPassword"
+						className="find-password"
 						onClick={() => {
 							alert('잘 생각해보세요^^');
 						}}
