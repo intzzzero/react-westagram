@@ -23,6 +23,9 @@ class Login extends React.Component {
 			inputPasswordValue: e.target.value
 		});
 	};
+	inputLengthCheck = () => {
+		his.state.inputEmailValue.length > 5 && this.state.inputPasswordValue.length > 5 ? true : false;
+	};
 
 	render() {
 		const disabledBtn = {
@@ -63,13 +66,7 @@ class Login extends React.Component {
 						<button
 							type="submit"
 							className="login-btn"
-							style={
-								this.state.inputEmailValue.length > 5 && this.state.inputPasswordValue.length > 5 ? (
-									abledBtn
-								) : (
-									disabledBtn
-								)
-							}
+							style={this.inputLengthCheck ? abledBtn : disabledBtn}
 						>
 							로그인
 						</button>

@@ -135,12 +135,48 @@ class FeedImg extends React.Component {
 }
 
 class FeedText extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			comment: '',
+			like: 0
+		};
+	}
+
+	clickedHeart = () => {
+		this.setState({
+			like: this.state.like + 1
+		});
+	};
+
+	inputComment = e => {
+		this.setState({
+			comment: e.target.value
+		});
+	};
+
 	render() {
+		const disabledBtn = {
+			disabled: true,
+			opacity: 0.3
+		};
+		const abledBtn = {
+			disabled: false,
+			opacity: 1,
+			cursor: 'pointer'
+		};
+		const newComment = (
+			<li className="comment">
+				<span>{this.state.comment}</span>
+			</li>
+		);
+
 		return (
 			<article className="FeedText">
 				<div className="icon-wrapper">
 					<div className="left-icons">
-						<FontAwesomeIcon className="heart-icon" icon={faHeart} />
+						<FontAwesomeIcon className="heart-icon" icon={faHeart} onClick={this.clickedHeart} />
 						<FontAwesomeIcon className="comment-icon" icon={faComment} />
 						<FontAwesomeIcon className="paperplane-icon" icon={faPaperPlane} />
 					</div>
@@ -149,12 +185,16 @@ class FeedText extends React.Component {
 					</div>
 				</div>
 				<div className="text-wrapper">
-					<p>좋아요 {/*좋아요 카운트 함수 추가 예정*/}개</p>
-					<ul className="comment-container">{/*댓글 추가될 곳*/}</ul>
+					<p>좋아요 {this.state.like}개</p>
+					<ul className="comment-container">{newComment}</ul>
 				</div>
 				<div className="new-comment">
-					<input className="input-comment" type="text" placeholder="댓글 달기..." />
-					<button className="upload-comment-btn" type="submit" disabled="disabled">
+					<input className="input-comment" type="text" placeholder="댓글 달기..." onChange={this.inputComment} />
+					<button
+						className="upload-comment-btn"
+						type="submit"
+						style={this.state.comment ? abledBtn : disabledBtn}
+					>
 						게시
 					</button>
 				</div>

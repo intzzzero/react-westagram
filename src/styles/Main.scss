@@ -6,23 +6,23 @@
 }
 
 /* media query */
-// @media only screen and (max-width: 560px) {
-// 	.searchContainer {
-// 		display: none;
-// 	}
-// 	.etcInfo {
-// 		display: none;
-// 	}
-// 	.feedContainer {
-// 		width: 100vw;
-// 	}
-// 	.navContainer {
-// 		justify-content: space-between;
-// 	}
-// }
+@media only screen and (max-width: 560px) {
+	.search-container {
+		display: none;
+	}
+	// .Recommend {
+	// 	display: none;
+	// }
+	.feed-container {
+		width: 100%;
+	}
+	.Nav {
+		justify-content: space-between;
+	}
+}
 
-// @media only screen and (max-width: 960px) {
-// 	.etcInfo {
-// 		display: none;
-// 	}
-// }
+@media only screen and (max-width: 960px) {
+	.Recommend {
+		display: none;
+	}
+}
