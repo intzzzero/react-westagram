@@ -173,6 +173,15 @@ class FeedText extends React.Component {
 		}));
 	};
 
+	deleteComment = e => {
+		const selectedComment = e.target.getAttribute('value');
+		console.log(selectedComment);
+		this.setState({
+			comments: this.state.comments.filter(comment => comment.id !== Number(selectedComment))
+		});
+		console.log(this.state.comments);
+	};
+
 	render() {
 		const disabledBtn = {
 			disabled: true,
@@ -198,7 +207,7 @@ class FeedText extends React.Component {
 				</div>
 				<div className="text-wrapper">
 					<p>좋아요 {this.state.like}개</p>
-					<CommentsContainer comments={this.state.comments} />
+					<CommentsContainer comments={this.state.comments} onClick={this.deleteComment} />
 				</div>
 				<div className="new-comment">
 					<input
@@ -211,7 +220,7 @@ class FeedText extends React.Component {
 					<button
 						className="upload-comment-btn"
 						type="submit"
-						style={this.state.comment ? abledBtn : disabledBtn}
+						style={this.state.text ? abledBtn : disabledBtn}
 						onClick={this.addComment}
 					>
 						게시
@@ -232,7 +241,9 @@ class CommentsContainer extends React.Component {
 							{comment.text}
 							<span className="comment-time"> - {comment.dateAndTime}</span>
 						</span>
-						<span className="comment-delete">삭제</span>
+						<span value={comment.id} className="comment-delete" onClick={this.props.onClick}>
+							삭제
+						</span>
 					</li>
 				))}
 			</ul>

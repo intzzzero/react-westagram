@@ -8,7 +8,7 @@ class Recommend extends React.Component {
 			<aside className="Recommend">
 				<div className="recommend-wrapper">
 					<div className="user-info">
-						<img src={profile} />
+						<img src={profile} alt="profile" />
 						<div className="username-wrapper">
 							<p className="nickname">aprilgreenery</p>
 							<p className="username">정수영(Sooyoung Jeong)</p>
@@ -21,7 +21,10 @@ class Recommend extends React.Component {
 						</div>
 						<ul className="user-list">
 							<li>
-								<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1" />
+								<img
+									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
+									alt=""
+								/>
 								<div className="username-wrapper">
 									<p className="nickname">codeAmeba</p>
 									<p className="username">정수영(Sooyoung Jeong)</p>
@@ -29,7 +32,10 @@ class Recommend extends React.Component {
 								<p className="follow">팔로우</p>
 							</li>
 							<li>
-								<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1" />
+								<img
+									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
+									alt=""
+								/>
 								<div className="username-wrapper">
 									<p className="nickname">codeAmeba</p>
 									<p className="username">정수영(Sooyoung Jeong)</p>
@@ -37,7 +43,10 @@ class Recommend extends React.Component {
 								<p className="follow">팔로우</p>
 							</li>
 							<li>
-								<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1" />
+								<img
+									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
+									alt=""
+								/>
 								<div className="username-wrapper">
 									<p className="nickname">codeAmeba</p>
 									<p className="username">정수영(Sooyoung Jeong)</p>
@@ -45,7 +54,10 @@ class Recommend extends React.Component {
 								<p className="follow">팔로우</p>
 							</li>
 							<li>
-								<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1" />
+								<img
+									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
+									alt=""
+								/>
 								<div className="username-wrapper">
 									<p className="nickname">codeAmeba</p>
 									<p className="username">정수영(Sooyoung Jeong)</p>
@@ -53,7 +65,10 @@ class Recommend extends React.Component {
 								<p className="follow">팔로우</p>
 							</li>
 							<li>
-								<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1" />
+								<img
+									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
+									alt=""
+								/>
 								<div className="username-wrapper">
 									<p className="nickname">codeAmeba</p>
 									<p className="username">정수영(Sooyoung Jeong)</p>
