@@ -145,22 +145,24 @@
 					}
 
 					.comment-container {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-					}
+						li {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							width: 100%;
+						}
 
-					.comment {
-						margin-bottom: 15px;
-						font-weight: 400;
-					}
+						.comment {
+							margin-bottom: 15px;
+							font-weight: 400;
+						}
 
-					.delete-comment {
-						font-weight: 400;
-						font-size: 0.8em;
-						margin-bottom: 15px;
-						color: rgba(0, 0, 0, 0.7);
-						cursor: pointer;
+						.delete-comment {
+							font-weight: 400;
+							font-size: 0.8em;
+							color: rgba(0, 0, 0, 0.7);
+							cursor: pointer;
+						}
 					}
 				}
 

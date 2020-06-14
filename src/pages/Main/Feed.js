@@ -139,7 +139,8 @@ class FeedText extends React.Component {
 		super(props);
 
 		this.state = {
-			comment: '',
+			comments: [],
+			text: '',
 			like: 0
 		};
 	}
@@ -150,10 +151,25 @@ class FeedText extends React.Component {
 		});
 	};
 
-	inputComment = e => {
+	writeComment = e => {
 		this.setState({
-			comment: e.target.value
+			text: e.target.value
 		});
+	};
+
+	addComment = e => {
+		e.preventDefault();
+		if (this.state.text.length === 0) {
+			return;
+		}
+		const newComment = {
+			text: this.state.text,
+			id: Date.now()
+		};
+		this.setState(state => ({
+			comments: state.comments.concat(newComment),
+			text: ''
+		}));
 	};
 
 	render() {
@@ -166,11 +182,6 @@ class FeedText extends React.Component {
 			opacity: 1,
 			cursor: 'pointer'
 		};
-		const newComment = (
-			<li className="comment">
-				<span>{this.state.comment}</span>
-			</li>
-		);
 
 		return (
 			<article className="FeedText">
@@ -186,19 +197,41 @@ class FeedText extends React.Component {
 				</div>
 				<div className="text-wrapper">
 					<p>좋아요 {this.state.like}개</p>
-					<ul className="comment-container">{newComment}</ul>
+					<CommentsContainer comments={this.state.comments} />
 				</div>
 				<div className="new-comment">
-					<input className="input-comment" type="text" placeholder="댓글 달기..." onChange={this.inputComment} />
+					<input
+						className="input-comment"
+						type="text"
+						placeholder="댓글 달기..."
+						value={this.state.text}
+						onChange={this.writeComment}
+					/>
 					<button
 						className="upload-comment-btn"
 						type="submit"
 						style={this.state.comment ? abledBtn : disabledBtn}
+						onClick={this.addComment}
 					>
 						게시
 					</button>
 				</div>
 			</article>
+		);
+	}
+}
+
+class CommentsContainer extends React.Component {
+	render() {
+		return (
+			<ul className="comment-container">
+				{this.props.comments.map(comment => (
+					<li className="comment" key={comment.id}>
+						<span>{comment.text}</span>
+						<span className="delete-comment">삭제</span>
+					</li>
+				))}
+			</ul>
 		);
 	}
 }
