@@ -157,11 +157,16 @@
 							font-weight: 400;
 						}
 
-						.delete-comment {
+						.comment-delete {
 							font-weight: 400;
 							font-size: 0.8em;
 							color: rgba(0, 0, 0, 0.7);
 							cursor: pointer;
+						}
+
+						.comment-time {
+							font-size: 0.8em;
+							color: rgba(0, 0, 0, 0.7);
 						}
 					}
 				}

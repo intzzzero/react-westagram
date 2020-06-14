@@ -164,7 +164,8 @@ class FeedText extends React.Component {
 		}
 		const newComment = {
 			text: this.state.text,
-			id: Date.now()
+			id: Date.now(),
+			dateAndTime: new Date().toLocaleDateString() + new Date().toLocaleTimeString()
 		};
 		this.setState(state => ({
 			comments: state.comments.concat(newComment),
@@ -227,8 +228,11 @@ class CommentsContainer extends React.Component {
 			<ul className="comment-container">
 				{this.props.comments.map(comment => (
 					<li className="comment" key={comment.id}>
-						<span>{comment.text}</span>
-						<span className="delete-comment">삭제</span>
+						<span>
+							{comment.text}
+							<span className="comment-time"> - {comment.dateAndTime}</span>
+						</span>
+						<span className="comment-delete">삭제</span>
 					</li>
 				))}
 			</ul>
