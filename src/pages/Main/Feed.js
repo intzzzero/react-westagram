@@ -197,7 +197,14 @@ class FeedText extends React.Component {
 			<article className="FeedText">
 				<div className="icon-wrapper">
 					<div className="left-icons">
-						<FontAwesomeIcon className="heart-icon" icon={faHeart} onClick={this.clickedHeart} />
+						<FontAwesomeIcon
+							className="heart-icon"
+							icon={faHeart}
+							onClick={this.clickedHeart}
+							style={
+								this.state.like !== 0 ? { color: 'rgb(255, 87, 87)' } : { color: 'rgba(0, 0, 0, 0.7)' }
+							}
+						/>
 						<FontAwesomeIcon className="comment-icon" icon={faComment} />
 						<FontAwesomeIcon className="paperplane-icon" icon={faPaperPlane} />
 					</div>
@@ -206,7 +213,7 @@ class FeedText extends React.Component {
 					</div>
 				</div>
 				<div className="text-wrapper">
-					<p>좋아요 {this.state.like}개</p>
+					<p>좋아요 {this.state.like} 개</p>
 					<CommentsContainer comments={this.state.comments} onClick={this.deleteComment} />
 				</div>
 				<div className="new-comment">
