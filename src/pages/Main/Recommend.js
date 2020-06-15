@@ -1,6 +1,6 @@
 import React from 'react';
-import profile from '../../images/profile.jpeg';
-import '../../styles/Recommend.scss';
+import profile from '../../Images/profile.jpeg';
+import './Recommend.scss';
 
 class Recommend extends React.Component {
 	render() {

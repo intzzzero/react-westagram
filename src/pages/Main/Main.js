@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Feed from './Feed';
 import Recommend from './Recommend';
-import '../../styles/Main.scss';
+import './Main.scss';
 
 class Main extends React.Component {
 	render() {

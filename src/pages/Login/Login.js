@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../index.css';
-import '../../styles/Login.scss';
-import logo from '../../images/logo.png';
+import './Login.scss';
+import logo from '../../Images/logo.png';
+import { withRouter } from 'react-router-dom';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -23,8 +24,14 @@ class Login extends React.Component {
 			inputPasswordValue: e.target.value
 		});
 	};
-	inputLengthCheck = () => {
-		his.state.inputEmailValue.length > 5 && this.state.inputPasswordValue.length > 5 ? true : false;
+	goToMain = () => {
+		const userId = this.state.inputEmailValue;
+		const userPw = this.state.inputPasswordValue;
+		if (userId === 'wecode@gmail.com' && userPw === '12341234') {
+			this.props.history.push('/main');
+		} else {
+			alert('제대로 입력하세여~');
+		}
 	};
 
 	render() {
@@ -57,16 +64,17 @@ class Login extends React.Component {
 							<input
 								type="password"
 								className="input-password"
-								minlength="4"
+								minLength="4"
 								placeholder="비밀번호"
 								value={this.state.inputPasswordValue}
 								onChange={this.passwordInputChange}
 							/>
 						</div>
 						<button
-							type="submit"
+							type="button"
 							className="login-btn"
-							style={this.inputLengthCheck ? abledBtn : disabledBtn}
+							style={this.state.inputEmailValue && this.state.inputPasswordValue ? abledBtn : disabledBtn}
+							onClick={this.goToMain}
 						>
 							로그인
 						</button>
@@ -90,4 +98,4 @@ class Login extends React.Component {
 	}
 }
 
-export default Login;
+export default withRouter(Login);

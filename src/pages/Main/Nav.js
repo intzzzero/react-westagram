@@ -2,9 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimesCircle, faHome, faCompass, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import '../../styles/Nav.scss';
-import logo from '../../images/logo.png';
-import profile from '../../images/profile.jpeg';
+import './Nav.scss';
+import logo from '../../Images/logo.png';
+import profile from '../../Images/profile.jpeg';
 
 class Nav extends React.Component {
 	render() {
@@ -20,10 +20,12 @@ class Nav extends React.Component {
 					</div>
 				</div>
 				<div className="search-container">
-					<span className="search-placeholder">검색</span>
-					<FontAwesomeIcon className="search-icon" icon={faSearch} />
-					<input type="text" className="search-input" />
+					<div className="search-icons-wrapper">
+						<FontAwesomeIcon className="search-icon" icon={faSearch} />
+						<span className="search-placeholder">검색</span>
+					</div>
 					<FontAwesomeIcon className="cancel-btn" icon={faTimesCircle} />
+					<input type="text" className="search-input" onFocus={this.focusingSearch} />
 					<div className="search-Keyword-container">
 						<ul className="search-keyword" />
 					</div>

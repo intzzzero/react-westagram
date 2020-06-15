@@ -29,20 +29,22 @@
 			outline: none;
 		}
 
-		.search-placeholder {
+		.search-icons-wrapper {
 			position: absolute;
 			color: rgba(0, 0, 0, 0.4);
+			left: 75px;
+		}
+
+		.search-placeholder {
 			font-size: 0.9em;
 			top: 2.5px;
-			left: 95px;
+			margin-left: 5px;
 		}
 
 		.search-icon {
-			position: absolute;
 			top: 9px;
-			left: 80px;
 			font-size: 0.65em;
-			color: rgba(0, 0, 0, 0.4);
+			margin-left: 5px;
 		}
 
 		.cancel-btn {
@@ -52,7 +54,7 @@
 			font-size: 0.9em;
 			color: rgba(0, 0, 0, 0.3);
 			cursor: pointer;
-			// display: none;
+			display: none;
 		}
 
 		// .search-keyword-active {
