@@ -2,7 +2,16 @@ import React from 'react';
 import profile from '../../Images/profile.jpeg';
 import './Recommend.scss';
 
+import { storiesData } from './dummydata';
+
 class Recommend extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			stories: storiesData
+		};
+	}
 	render() {
 		return (
 			<aside className="Recommend">
@@ -20,61 +29,18 @@ class Recommend extends React.Component {
 							<span>모두 보기</span>
 						</div>
 						<ul className="user-list">
-							<li>
-								<img
-									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
-									alt=""
-								/>
-								<div className="username-wrapper">
-									<p className="nickname">codeAmeba</p>
-									<p className="username">정수영(Sooyoung Jeong)</p>
-								</div>
-								<p className="follow">팔로우</p>
-							</li>
-							<li>
-								<img
-									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
-									alt=""
-								/>
-								<div className="username-wrapper">
-									<p className="nickname">codeAmeba</p>
-									<p className="username">정수영(Sooyoung Jeong)</p>
-								</div>
-								<p className="follow">팔로우</p>
-							</li>
-							<li>
-								<img
-									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
-									alt=""
-								/>
-								<div className="username-wrapper">
-									<p className="nickname">codeAmeba</p>
-									<p className="username">정수영(Sooyoung Jeong)</p>
-								</div>
-								<p className="follow">팔로우</p>
-							</li>
-							<li>
-								<img
-									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
-									alt=""
-								/>
-								<div className="username-wrapper">
-									<p className="nickname">codeAmeba</p>
-									<p className="username">정수영(Sooyoung Jeong)</p>
-								</div>
-								<p className="follow">팔로우</p>
-							</li>
-							<li>
-								<img
-									src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QX-N6MI6SnnQueB8eKeFLQHaHa%26pid%3DApi&f=1"
-									alt=""
-								/>
-								<div className="username-wrapper">
-									<p className="nickname">codeAmeba</p>
-									<p className="username">정수영(Sooyoung Jeong)</p>
-								</div>
-								<p className="follow">팔로우</p>
-							</li>
+							{this.state.stories.map(story => (
+								<li>
+									<img src={story.src} alt={story.name} />
+									<div className="username-wrapper">
+										<p className="nickname">{story.name}</p>
+										<p className="username">
+											{story.name.toUpperCase()}({story.name})
+										</p>
+									</div>
+									<p className="follow">팔로우</p>
+								</li>
+							))}
 						</ul>
 					</div>
 					<footer className="footer">
