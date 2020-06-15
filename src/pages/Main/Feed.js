@@ -216,7 +216,7 @@ class FeedText extends React.Component {
 					<p>좋아요 {this.state.like} 개</p>
 					<CommentsContainer comments={this.state.comments} onClick={this.deleteComment} />
 				</div>
-				<div className="new-comment">
+				<form className="new-comment">
 					<input
 						className="input-comment"
 						type="text"
@@ -232,7 +232,7 @@ class FeedText extends React.Component {
 					>
 						게시
 					</button>
-				</div>
+				</form>
 			</article>
 		);
 	}
@@ -248,7 +248,7 @@ class CommentsContainer extends React.Component {
 							{comment.text}
 							<span className="comment-time"> - {comment.dateAndTime}</span>
 						</span>
-						<span value={comment.id} className="comment-delete" onClick={this.props.onClick}>
+						<span type="submit" value={comment.id} className="comment-delete" onClick={this.props.onClick}>
 							삭제
 						</span>
 					</li>
