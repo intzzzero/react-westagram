@@ -1,3 +1,5 @@
+@import '../../Styles/Common.scss';
+
 .Feed {
 	display: flex;
 	justify-content: center;
@@ -193,7 +195,7 @@
 					position: absolute;
 					right: 12px;
 					bottom: 16px;
-					color: #0095f6;
+					color: $primary-color;
 					font-size: 0.9em;
 					font-weight: 600;
 					opacity: 0.3;
