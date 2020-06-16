@@ -1,5 +1,5 @@
 .Nav {
-	height: 53px;
+	height: 55px;
 	width: 100%;
 	background-color: #fff;
 	position: fixed;
@@ -11,7 +11,7 @@
 	align-items: center;
 
 	.logo-container img {
-		height: 32px;
+		width: 150px;
 		margin-top: 5px;
 		padding-left: 1.5vw;
 	}
@@ -82,7 +82,9 @@
 		align-items: center;
 		padding-right: 1vw;
 
-		div {
+		.compass-icon,
+		.likes-icon,
+		img {
 			margin-left: 25px;
 		}
 
