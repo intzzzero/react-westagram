@@ -4,7 +4,7 @@ import { faEllipsisH, faHeart, faComment, faPaperPlane, faBookmark } from '@fort
 import './Feed.scss';
 import profile from '../../Images/profile.jpeg';
 
-import { storiesData } from './dummydata';
+import { storiesData } from './dummydata.js';
 
 class Feed extends React.Component {
 	constructor(props) {

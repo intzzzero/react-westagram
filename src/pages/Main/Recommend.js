@@ -2,7 +2,7 @@ import React from 'react';
 import profile from '../../Images/profile.jpeg';
 import './Recommend.scss';
 
-import { storiesData } from './dummydata';
+import { storiesData } from './dummydata.js';
 
 class Recommend extends React.Component {
 	constructor(props) {
